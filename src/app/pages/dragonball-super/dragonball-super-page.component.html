@@ -1,0 +1,20 @@
+<p>DragonBall Page</p>
+<hr />
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <dragonball-character-add
+      (newCharacter)="dragonballService.addCharacter($event)"
+    />
+  </div>
+
+  <div class="col-12 col-sm-6 dragonball-content">
+    <dragonball-character-list
+      listName="Personajes de Dragon Ball fuertes"
+      [characters]="dragonballService.characters()"
+    />
+  </div>
+</section>
+
+<div class="dragonball-footer mt-3">
+  <p>&copy; 2023 Dragon Ball Universe</p>
+</div>
